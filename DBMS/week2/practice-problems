@@ -1,0 +1,69 @@
+
+1. Write a CREATE TABLE statement for the Customer table. Choose data types appropriate for the DBMS used in your course. All columns are required (not null).
+
+create table Customer (
+	custno char(4), 
+	custname varchar(30) not null, 
+	address varchar(30) not null, 
+	internal char(1) not null, 
+	contact varchar(30) not null, 
+	phone integer(7) not null, 
+	city varchar(10) not null, 
+	state char(2) not null, 
+	zip integer(5) not null,
+	constraint pk primary key(custno)
+);
+
+
+2. Write a CREATE TABLE statement for the Facility table. Choose data types appropriate for the DBMS used in your course. All columns are required (not null).
+
+create table Facility (
+	facno char(4),
+	facname varchar(30) not null,
+	constraint pkf primary key(facno)
+);
+
+3. Write a CREATE TABLE statement for the Location table. Choose data types appropriate for the DBMS used in your course. LocName column is required (not null).
+
+create table Location (
+	locno char(4) primary key, 
+	facno char(4) not null,
+	locname varchar(20) not null
+);
+
+
+4. Identify the foreign key(s) and 1-M relationship(s) among the Customer, Facility, and Location tables. For each relationship, identify the parent table and the child table.
+
+There is a 1-Many relationship between Facility-facno(pk) and Location-facno(fk). 
+
+
+5. Extend your CREATE TABLE statement from problem (3) with referential integrity constraints.
+
+create table Location (
+	locno char(4) primary key,
+	locname varchar(20) not null, 
+	facno char(4),	
+	constraint fk foreign key(facno) references Facility(facno)
+);
+
+6. From examination of the sample data and your common understanding of scheduling and operation of events, are null values allowed for the foreign key in the Location table?  Why or why not? Extend the CREATE TABLE statement in problem (5) to enforce the null value restrictions if any.
+
+Null values are not allowed for facno as the sample data shows that each facility has a related location. 
+
+Extended create statement : 
+
+create table Location (
+	locno char(4) primary key,
+	locname varchar(20) not null, 
+	facno char(4) not null,	 
+	constraint fk foreign key(facno) references Facility(facno)
+);
+
+7. Extend your CREATE TABLE statement for the Facility table (problem 2) with a unique constraint for FacName. Use an external named constraint clause for the unique constraint.
+
+create table Facility (
+	facno char(4) primary key, 
+	facname varchar(30) not null, 
+	constraint un unique(facname)
+);
+
