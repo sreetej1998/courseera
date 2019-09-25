@@ -1,0 +1,78 @@
+1.Question 1
+
+A database management system (DBMS) is important to modern organizations because:
+
+Ans. It helps organizations to manage their data
+
+
+2.Question 2
+
+The most active functional users are called:
+
+Ans. Power users
+
+
+
+3.Question 3
+
+Users who plan and design the database are called:
+
+
+Ans. Information systems professionals
+
+
+
+4.Question 4
+
+The difference between database administrator and data administrator is that:
+
+Ans. Data administrator has planning role
+
+
+5.Question 5
+
+Embedded DBMS requires:
+
+Ans. Low Memory
+
+
+6.Question 6
+
+Identify advantages of combining a procedural language with a non-procedural language.
+
+Ans. Provides improved performance in some situations
+
+	 Allows batch processing
+
+	 Allows form and report customizations
+
+
+
+7.Question 7
+
+Transaction processing ability in an enterprise DBMS is typically better than the transaction processing ability in a DBMS desktop.
+
+Ans. True
+
+
+8.Question 8
+
+Which of the followings is a characteristic of data warehouse:
+
+Ans. The data in warehouse is optimized for generating reports
+
+
+
+9.Question 9
+
+Which of the following is a characteristic of the fourth DBMS generation:
+
+Ans. Can store and manipulate unconventional data
+
+
+10.Question 10
+
+Persistent is a property for databases. What does it mean?
+
+
+Ans. The data should be stored on stable hardware
